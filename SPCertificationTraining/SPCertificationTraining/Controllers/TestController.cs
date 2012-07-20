@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using SPCertificationTraining.Models;
+using SPCertificationTraining.ViewModels;
 
 namespace SPCertificationTraining.Controllers
 {
@@ -22,90 +23,43 @@ namespace SPCertificationTraining.Controllers
             }
         }
 
-        //
-        // GET: /Test/Details/5
-
-        public ActionResult Details(int id)
+        public ActionResult StartTest(Guid id)
         {
-            return View();
+            // Create Test run
+
+            // Send to first question
+
+            return RedirectToAction("Question", new { testID = id });
         }
 
-        //
-        // GET: /Test/Create
-
-        public ActionResult Create()
+        public ActionResult Question(Guid testID)
         {
-            return View();
-        } 
+            using (CertificationTrainingContext context = new CertificationTrainingContext())
+            {
+                var questions = context.Questions.Include("Answers")
+                    .Where(x => x.TestID == testID)
+                    .ToList();
 
-        //
-        // POST: /Test/Create
+                Random rnd = new Random();
+                var questionIndex = rnd.Next(0, questions.Count);
+
+                Question question = questions[questionIndex];
+
+                QuestionViewModel model = new QuestionViewModel
+                {
+                    QuestionID = question.QuestionID,
+                    Description = question.Description,
+                    Answers = question.Answers.Shuffle().Select(x => new AnswerViewModel { AnswerID = x.AnswerID, Description = x.Description, IsChecked = false })
+                };
+
+                return View(model);
+            }
+        }
 
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Question(Guid TestID, Guid questionID, Guid answerID)
         {
-            try
-            {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-        
-        //
-        // GET: /Test/Edit/5
- 
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        //
-        // POST: /Test/Edit/5
-
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
- 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        //
-        // GET: /Test/Delete/5
- 
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        //
-        // POST: /Test/Delete/5
-
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
- 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            return RedirectToAction("Question");
         }
     }
 }

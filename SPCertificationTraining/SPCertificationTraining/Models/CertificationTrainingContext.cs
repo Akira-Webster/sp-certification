@@ -84,7 +84,7 @@ namespace SPCertificationTraining.Models
     public class TestRunAnswer
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid TestRunAnaswerID { get; set; }
+        public Guid TestRunAnswerID { get; set; }
 
         public Guid QuestionID { get; set; }
         public Question Question { get; set; }
