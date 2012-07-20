@@ -1,0 +1,28 @@
+﻿@model IEnumerable<SPCertificationTraining.Models.Test>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Certification Practice Tests</h2>
+
+<table>
+    <tr>
+        <th>
+            Title
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.ActionLink("Start Test", "StartTest", new { id=item.TestID })
+        </td>
+    </tr>
+}
+
+</table>
