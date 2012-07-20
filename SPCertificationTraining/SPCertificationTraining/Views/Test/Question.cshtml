@@ -14,7 +14,8 @@
     @Html.ValidationSummary(true)
 
     @Html.HiddenFor(model => model.TestID)
-    
+    @Html.HiddenFor(model => model.Ordinal)
+
     <p>
         @Html.DisplayFor(model => model.Description)
     </p>
