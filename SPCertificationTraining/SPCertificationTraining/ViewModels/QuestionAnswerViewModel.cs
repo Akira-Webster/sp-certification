@@ -11,7 +11,7 @@ namespace SPCertificationTraining.ViewModels
         public string Description { get; set; }
         public int Ordinal { get; set; }
 
-        public Guid TestID { get; set; }
+        public Guid TestRunID { get; set; }
 
         public IEnumerable<AnswerViewModel> Answers { get; set; }
     }

@@ -68,19 +68,37 @@ namespace SPCertificationTraining.Controllers
         {
             using (CertificationTrainingContext context = new CertificationTrainingContext())
             {
-                var TestRunAnswers = context.TestRuns
+                var testRunAnswers = context.TestRuns.Include("Answer")
                     .Where(x => x.TestRunID == id)
-                    .SelectMany(x => x.TestRunAnswers)
-                    .First(x => x.Ordinal == ordinal);
+                    .SelectMany(x => x.TestRunAnswers);
+
+                var questionCount = testRunAnswers.Count();
+
+                if (ordinal > questionCount)
+                {
+                    throw new Exception("Not a valid ordinal.");
+                }
+                else if (ordinal == questionCount)
+                {
+                    // Loop around again
+                    ordinal = 0;
+                }
+
+                // TODO: Get the answer user's anaswer
+
+                var testRunAnswer = testRunAnswers.First(x => x.Ordinal == ordinal);
+
+                var selectedAnswers = context.TestRunAnswers.Where(x => x.TestRunAnswerID == testRunAnswer.TestRunAnswerID).SelectMany(x => x.Answer).ToList();
 
                 var question = context.Questions.Include("Answers")
-                    .First(x => x.QuestionID == TestRunAnswers.QuestionID);
+                    .First(x => x.QuestionID == testRunAnswer.QuestionID);
 
                 QuestionViewModel model = new QuestionViewModel
                 {
                     QuestionID = question.QuestionID,
                     Description = question.Description,
-                    Answers = question.Answers.Shuffle().Select(x => new AnswerViewModel { AnswerID = x.AnswerID, Description = x.Description, IsChecked = false })
+                    TestRunID = id,
+                    Answers = question.Answers.Shuffle().Select(x => new AnswerViewModel { AnswerID = x.AnswerID, Description = x.Description, IsChecked = selectedAnswers.Any(y => y.AnswerID == x.AnswerID) })
                 };
 
                 return View(model);
@@ -92,8 +110,20 @@ namespace SPCertificationTraining.Controllers
         {
             using (CertificationTrainingContext context = new CertificationTrainingContext())
             {
+                var testRunAnswers = context.TestRuns.Include("Answer")
+                    .Where(x => x.TestRunID == model.TestRunID)
+                    .SelectMany(x => x.TestRunAnswers)
+                    .First(x => x.Ordinal == model.Ordinal);
 
-                return RedirectToAction("Question", model.Ordinal++);
+                var checkIds = model.Answers.Where(x => x.IsChecked).Select(x => x.AnswerID);
+
+                var answers = context.Answers.Where(x => checkIds.Contains(x.AnswerID));
+
+                testRunAnswers.Answer = answers.ToList();
+
+                context.SaveChanges();
+
+                return RedirectToAction("Question", new { id = model.TestRunID, ordinal = model.Ordinal + 1 });
             }
         }
     }
