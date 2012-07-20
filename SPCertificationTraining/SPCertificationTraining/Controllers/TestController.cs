@@ -57,7 +57,7 @@ namespace SPCertificationTraining.Controllers
         }
 
         [HttpPost]
-        public ActionResult Question(Guid TestID, Guid questionID, Guid answerID)
+        public ActionResult Question(QuestionViewModel model)
         {
             return RedirectToAction("Question");
         }

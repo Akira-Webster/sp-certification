@@ -10,6 +10,8 @@ namespace SPCertificationTraining.ViewModels
         public Guid QuestionID { get; set; }
         public string Description { get; set; }
 
+        public Guid TestID { get; set; }
+
         public IEnumerable<AnswerViewModel> Answers { get; set; }
     }
 

@@ -12,6 +12,9 @@
 @using (Html.BeginForm())
 {
     @Html.ValidationSummary(true)
+
+    @Html.HiddenFor(model => model.TestID)
+    
     <p>
         @Html.DisplayFor(model => model.Description)
     </p>
