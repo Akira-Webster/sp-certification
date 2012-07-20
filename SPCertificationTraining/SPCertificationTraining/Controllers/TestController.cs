@@ -29,15 +29,15 @@ namespace SPCertificationTraining.Controllers
 
             // Send to first question
 
-            return RedirectToAction("Question", new { testID = id });
+            return RedirectToAction("Question", new { id = id });
         }
 
-        public ActionResult Question(Guid testID)
+        public ActionResult Question(Guid id)
         {
             using (CertificationTrainingContext context = new CertificationTrainingContext())
             {
                 var questions = context.Questions.Include("Answers")
-                    .Where(x => x.TestID == testID)
+                    .Where(x => x.TestID == id)
                     .ToList();
 
                 Random rnd = new Random();
