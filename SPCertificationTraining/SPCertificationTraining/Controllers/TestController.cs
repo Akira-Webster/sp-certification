@@ -26,24 +26,52 @@ namespace SPCertificationTraining.Controllers
         public ActionResult StartTest(Guid id)
         {
             // Create Test run
+            using (CertificationTrainingContext context = new CertificationTrainingContext())
+            {
+                var testRun = new TestRun
+                {
+                    AccountID = Guid.NewGuid(),
+                    DateTaken = DateTime.Now,
+                    DateComplete = DateTime.Now,
+                    TestID = id
+                };
 
-            // Send to first question
+                context.TestRuns.Add(testRun);
 
-            return RedirectToAction("Question", new { id = id });
+                var questions = context.Questions.Include("Answers")
+                    .Where(x => x.TestID == id)
+                    .ToList().Shuffle();
+
+                List<TestRunAnswer> assignedQuestions = new List<TestRunAnswer>();
+
+                foreach (var question in questions)
+                {
+                    assignedQuestions.Add(new TestRunAnswer
+                    {
+                        QuestionID = question.QuestionID
+                    });
+                }
+
+                testRun.TestRunAnswers = assignedQuestions;
+
+                context.SaveChanges();
+
+                // Send to first question
+                return RedirectToAction("Question", new { id = testRun.TestRunID });
+            }
         }
 
-        public ActionResult Question(Guid id)
+        public ActionResult Question(Guid id, int ordinal)
         {
             using (CertificationTrainingContext context = new CertificationTrainingContext())
             {
-                var questions = context.Questions.Include("Answers")
-                    .Where(x => x.TestID == id)
-                    .ToList();
+                var TestRunAnswers = context.TestRuns
+                    .Where(x => x.TestRunID == id)
+                    .SelectMany(x => x.TestRunAnswers)
+                    .First(x => x.Ordinal == ordinal);
 
-                Random rnd = new Random();
-                var questionIndex = rnd.Next(0, questions.Count);
-
-                Question question = questions[questionIndex];
+                var question = context.Questions.Include("Answers")
+                    .First(x => x.QuestionID == TestRunAnswers.QuestionID);
 
                 QuestionViewModel model = new QuestionViewModel
                 {

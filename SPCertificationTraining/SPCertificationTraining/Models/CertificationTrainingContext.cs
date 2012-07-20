@@ -89,6 +89,8 @@ namespace SPCertificationTraining.Models
         public Guid QuestionID { get; set; }
         public Question Question { get; set; }
 
+        public int Ordinal { get; set; }
+
         public List<Answer> Answer { get; set; }
     }
 }
