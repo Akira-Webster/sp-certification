@@ -43,7 +43,6 @@ namespace SPCertificationTraining.Models
         public string Description { get; set; }
 
         public List<Answer> Answers { get; set; }
-        public List<TestRunAnswer> TestRunAnswers { get; set; }
 
         public Guid TestID { get; set; }
         public Test Test { get; set; }
@@ -58,7 +57,7 @@ namespace SPCertificationTraining.Models
         public string Description { get; set; }
 
         [Required]
-        public bool IsAnswer { get; set; }
+        public bool IsCorrectAnswer { get; set; }
 
         public Guid QuestionID { get; set; }
         public Question Question { get; set; }
@@ -90,7 +89,6 @@ namespace SPCertificationTraining.Models
         public Guid QuestionID { get; set; }
         public Question Question { get; set; }
 
-        public Guid AnswerID { get; set; }
-        public Answer Answer { get; set; }
+        public List<Answer> Answer { get; set; }
     }
 }
