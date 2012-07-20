@@ -44,12 +44,15 @@ namespace SPCertificationTraining.Controllers
 
                 List<TestRunAnswer> assignedQuestions = new List<TestRunAnswer>();
 
+                int ordinal = 0;
                 foreach (var question in questions)
                 {
                     assignedQuestions.Add(new TestRunAnswer
                     {
-                        QuestionID = question.QuestionID
+                        QuestionID = question.QuestionID,
+                        Ordinal = ordinal
                     });
+                    ordinal++;
                 }
 
                 testRun.TestRunAnswers = assignedQuestions;
@@ -87,7 +90,11 @@ namespace SPCertificationTraining.Controllers
         [HttpPost]
         public ActionResult Question(QuestionViewModel model)
         {
-            return RedirectToAction("Question");
+            using (CertificationTrainingContext context = new CertificationTrainingContext())
+            {
+
+                return RedirectToAction("Question", model.Ordinal++);
+            }
         }
     }
 }

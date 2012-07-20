@@ -9,6 +9,7 @@ namespace SPCertificationTraining.ViewModels
     {
         public Guid QuestionID { get; set; }
         public string Description { get; set; }
+        public int Ordinal { get; set; }
 
         public Guid TestID { get; set; }
 
