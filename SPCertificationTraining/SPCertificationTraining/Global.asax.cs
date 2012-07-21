@@ -22,6 +22,12 @@ namespace SPCertificationTraining
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                "Question", // Route name
+                "{controller}/{action}/{id}/{ordinal}", // URL with parameters
+                new { controller = "Test", action = "Question", ordinal = 0 } // Parameter defaults
+            );
+
+            routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{id}", // URL with parameters
                 new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
