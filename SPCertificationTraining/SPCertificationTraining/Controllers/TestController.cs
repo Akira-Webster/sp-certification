@@ -78,7 +78,7 @@ namespace SPCertificationTraining.Controllers
                 {
                     throw new Exception("Not a valid ordinal.");
                 }
-                else if (ordinal == questionCount)
+                else if (ordinal == questionCount - 1)
                 {
                     // Loop around again
                     ordinal = 0;
