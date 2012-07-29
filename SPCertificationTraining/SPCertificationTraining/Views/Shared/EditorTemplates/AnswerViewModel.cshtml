@@ -1,0 +1,9 @@
+﻿@model SPCertificationTraining.ViewModels.AnswerViewModel
+
+<div>
+    <span class="display-field">
+        @Html.HiddenFor(model => model.AnswerID)
+        @Html.CheckBoxFor(model => model.IsChecked)
+    </span>
+    <span class="display-label">@Html.DisplayFor(model => model.Description)</span>
+</div> 

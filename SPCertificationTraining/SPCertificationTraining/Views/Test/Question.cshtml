@@ -22,16 +22,7 @@
     <fieldset>
         <legend>Answers</legend>
 
-        @foreach (var item in Model.Answers)
-        {
-            <div>
-                <span class="display-field">
-                    @Html.HiddenFor(modelAnswer => item.AnswerID)
-                    @Html.CheckBoxFor(modelAnswer => item.IsChecked)
-                </span>
-                <span class="display-label">@Html.DisplayFor(modelAnswer => item.Description)</span>
-            </div> 
-        }
+        @Html.EditorFor(model => model.Answers)
 
         <p>
             <input type="submit" value="Save" />
