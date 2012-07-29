@@ -3,128 +3,136 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using SPCertificationTraining.Models;
-using SPCertificationTraining.ViewModels;
+using System.Web.Security;
 
 namespace SPCertificationTraining.Controllers
 {
     [Authorize]
     public class TestController : Controller
     {
-        //
-        // GET: /Test/
+        private Models.TrainingContext Context { get; set; }
+
+        private Guid UserID { get { return (Guid)Membership.GetUser(HttpContext.User.Identity.Name).ProviderUserKey; } }
+
+        public TestController()
+        {
+            this.Context = new Models.TrainingContext();
+        }
 
         public ActionResult Index()
         {
-            using(CertificationTrainingContext context = new CertificationTrainingContext())
-            {
-                var test = context.Tests.ToList();
-                return View(test);
-            }
+            this.ViewBag.Courses = this.Context.Courses.ToList().Select(c => new SelectListItem() { Text = c.Title, Value = c.ID.ToString() });
+            this.ViewBag.PastTests = this.Context.Tests.Where(t => t.UserKey == this.UserID).ToList();
+
+            return View();
         }
 
-        public ActionResult StartTest(Guid id)
+        public ActionResult Problem(Guid id)
         {
-            // Create Test run
-            using (CertificationTrainingContext context = new CertificationTrainingContext())
-            {
-                var testRun = new TestRun
-                {
-                    AccountID = Guid.NewGuid(),
-                    DateTaken = DateTime.Now,
-                    DateComplete = DateTime.Now,
-                    TestID = id
-                };
+            var test = this.Context.Tests.FirstOrDefault(t => t.ID == id && t.UserKey == this.UserID);
+            if (test == null)
+                throw new HttpException(404, "The Test you are looking for has been lost.");
 
-                context.TestRuns.Add(testRun);
+            if (test.IsFinsihed)
+                return RedirectToAction("Index");
 
-                var questions = context.Questions.Include("Answers")
-                    .Where(x => x.TestID == id)
-                    .ToList().Shuffle();
+            var question = test.Questions.ToList().ElementAt(test.Progress);
+            if (question == null)
+                throw new HttpException(404, "The Question you are looking for has been lost.");
 
-                List<TestRunAnswer> assignedQuestions = new List<TestRunAnswer>();
-
-                int ordinal = 0;
-                foreach (var question in questions)
-                {
-                    assignedQuestions.Add(new TestRunAnswer
-                    {
-                        QuestionID = question.QuestionID,
-                        Ordinal = ordinal
-                    });
-                    ordinal++;
-                }
-
-                testRun.TestRunAnswers = assignedQuestions;
-
-                context.SaveChanges();
-
-                // Send to first question
-                return RedirectToAction("Question", new { id = testRun.TestRunID });
-            }
-        }
-
-        public ActionResult Question(Guid id, int ordinal)
-        {
-            using (CertificationTrainingContext context = new CertificationTrainingContext())
-            {
-                var testRunAnswers = context.TestRuns.Include("Answer")
-                    .Where(x => x.TestRunID == id)
-                    .SelectMany(x => x.TestRunAnswers);
-
-                var questionCount = testRunAnswers.Count();
-
-                if (ordinal > questionCount)
-                {
-                    throw new Exception("Not a valid ordinal.");
-                }
-                else if (ordinal == questionCount)
-                {
-                    // Loop around again
-                    ordinal = 0;
-                }
-
-                // TODO: Get the answer user's anaswer
-
-                var testRunAnswer = testRunAnswers.First(x => x.Ordinal == ordinal);
-
-                var selectedAnswers = context.TestRunAnswers.Where(x => x.TestRunAnswerID == testRunAnswer.TestRunAnswerID).SelectMany(x => x.Answer).ToList();
-
-                var question = context.Questions.Include("Answers")
-                    .First(x => x.QuestionID == testRunAnswer.QuestionID);
-
-                QuestionViewModel model = new QuestionViewModel
-                {
-                    QuestionID = question.QuestionID,
-                    Description = question.Description,
-                    TestRunID = id,
-                    Answers = question.Answers.Shuffle().Select(x => new AnswerViewModel { AnswerID = x.AnswerID, Description = x.Description, IsChecked = selectedAnswers.Any(y => y.AnswerID == x.AnswerID) })
-                };
-
-                return View(model);
-            }
+            return View(question.Problem);
         }
 
         [HttpPost]
-        public ActionResult Question(QuestionViewModel model)
+        public ActionResult Problem(Guid id, FormCollection collection)
         {
-            using (CertificationTrainingContext context = new CertificationTrainingContext())
-            {
-                var testRunAnswers = context.TestRuns.Include("Answer")
-                    .Where(x => x.TestRunID == model.TestRunID)
-                    .SelectMany(x => x.TestRunAnswers)
-                    .First(x => x.Ordinal == model.Ordinal);
+            var test = this.Context.Tests.FirstOrDefault(t => t.ID == id && t.UserKey == this.UserID);
+            if (test == null)
+                throw new HttpException(404, "The Test you are looking for has been lost.");
 
-                var checkIds = model.Answers.Where(x => x.IsChecked).Select(x => x.AnswerID);
+            var currentquestion = test.Questions.ToList().ElementAtOrDefault(test.Progress);
+            if (currentquestion == null)
+                throw new HttpException(404, "The Question you are looking for has been lost.");
 
-                var answers = context.Answers.Where(x => checkIds.Contains(x.AnswerID));
+            // Clear all answers
+            currentquestion.Answers.Clear();
 
-                testRunAnswers.Answer = answers.ToList();
+            // Map submitions
+            var submitions = (collection["Identity"] == null) ? new List<string>() : collection["Identity"].Split(',').ToList();
+            foreach (var identity in submitions)
+                currentquestion.Answers.Add(new Models.Answer() { ID = Guid.NewGuid(), Identity = identity });
 
-                context.SaveChanges();
+            // Update progress
+            test.Progress++;
 
-                return RedirectToAction("Question", new { id = model.TestRunID, ordinal = model.Ordinal + 1 });
-            }
+            this.Context.SaveChanges();
+
+            if(test.IsFinsihed)
+                return RedirectToAction("Index");
+
+            var nextquestion = test.Questions.ToList().ElementAtOrDefault(test.Progress);
+            if (nextquestion == null)
+                throw new HttpException(404, "The Question you are looking for has been lost.");
+
+            return View(nextquestion.Problem);
         }
+
+        public ActionResult Details(Guid id)
+        {
+            var test = this.Context.Tests.FirstOrDefault(t => t.ID == id && t.UserKey == this.UserID);
+            if (test == null)
+                throw new HttpException(404, "The Test you are looking for has been lost.");
+
+            return View(test);
+        }
+
+        [HttpPost]
+        public ActionResult Create(FormCollection collection)
+        {
+            try
+            {
+                var id = new Guid(collection["Course"]);
+                var course = this.Context.Courses.FirstOrDefault(c => c.ID == id);
+                var problems = course.Problems.Shuffle().Take(Models.Test.QuestionsPerTest).ToList();
+
+                var test = new Models.Test();
+                test.ID = Guid.NewGuid();
+                test.Course = course;
+                test.Date = DateTime.Now;
+                test.Questions = new List<Models.Question>();
+                test.UserKey = this.UserID;
+
+                foreach (var problem in problems)
+                {
+                    var question = new Models.Question();
+                    question.ID = Guid.NewGuid();
+                    question.Problem = problem;
+                    question.Answers = new List<Models.Answer>();
+                        
+                    test.Questions.Add(question);
+                }
+
+                this.Context.Tests.Add(test);
+                this.Context.SaveChanges();
+            }
+            catch
+            {
+            }
+
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Delete(Guid id)
+        {
+            var test = this.Context.Tests.FirstOrDefault(t => t.ID == id && t.UserKey == this.UserID);
+            if (test == null)
+                throw new HttpException(404, "The Test you are looking for has been lost.");
+
+            this.Context.Tests.Remove(test);
+            this.Context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+      
     }
 }

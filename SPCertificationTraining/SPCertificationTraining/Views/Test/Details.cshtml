@@ -1,0 +1,15 @@
+﻿@model SPCertificationTraining.Models.Test
+
+@{
+    ViewBag.Title = "Test Details";
+}
+
+<div>
+<h2>Test Details on @Model.Date</h2>
+<strong>@Model.Course.Title</strong> - <span>@Model.Course.Description</span>
+</div>
+<div>
+<span>Score: @Model.Questions.Count(q => q.IsCorrect) / @Model.Total</span>
+<br />
+<span>Avgerage: @Model.Avgerage.ToString("P")</span>
+</div>

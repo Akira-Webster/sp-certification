@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using System.Data.Entity;
+using SPCertificationTraining.Models;
 
 namespace SPCertificationTraining
 {
@@ -20,12 +22,6 @@ namespace SPCertificationTraining
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
-            routes.MapRoute(
-                "Question", // Route name
-                "{controller}/{action}/{id}/{ordinal}", // URL with parameters
-                new { controller = "Test", action = "Question", ordinal = 0 } // Parameter defaults
-            );
 
             routes.MapRoute(
                 "Default", // Route name
