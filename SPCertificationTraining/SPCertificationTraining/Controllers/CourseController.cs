@@ -79,5 +79,17 @@ namespace SPCertificationTraining.Controllers
                 return View();
             }
         }
+
+        public ActionResult Delete(Guid id)
+        {
+            var course = this.Context.Courses.FirstOrDefault(t => t.ID == id);
+            if (course == null)
+                throw new HttpException(404, "The Course you are looking for has been lost.");
+
+            this.Context.Courses.Remove(course);
+            this.Context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 }
