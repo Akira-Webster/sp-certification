@@ -1130,8 +1130,8 @@ Which combination of the following actions should you take? (Choose two.)
         </Choice>
         <Choice>
           <Identity>E</Identity>
-          <Description>Test</Description>
-          <IsAnswer>You should consider having a new external list configured to reference the exported data file.</IsAnswer>
+          <Description>You should consider having a new external list configured to reference the exported data file.</Description>
+          <IsAnswer>false</IsAnswer>
         </Choice>
       </Choices>
     </Problem>
@@ -1397,7 +1397,7 @@ Which of the following actions should you take?
           <IsAnswer>false</IsAnswer>
         </Choice>
         <Choice>
-          <Identity>De</Identity>
+          <Identity>D</Identity>
           <Description>You should consider making use of the SP.UI.UlUtility class in the client application.</Description>
           <IsAnswer>false</IsAnswer>
         </Choice>
@@ -1426,13 +1426,13 @@ Which of the following actions should you take?
         </Choice>
         <Choice>
           <Identity>C</Identity>
-          <Description>Test</Description>
-          <IsAnswer>You should have an Unmanaged Metadata column configured.</IsAnswer>
+          <Description>You should have an Unmanaged Metadata column configured.</Description>
+          <IsAnswer>true</IsAnswer>
         </Choice>
         <Choice>
           <Identity>D</Identity>
-          <Description>Test</Description>
-          <IsAnswer>You should have a Managed Metadata column configured.</IsAnswer>
+          <Description>You should have a Managed Metadata column configured.</Description>
+          <IsAnswer>false</IsAnswer>
         </Choice>
       </Choices>
     </Problem>
@@ -1787,7 +1787,7 @@ Which combination of the following actions should you take? (Choose two.)
         </Choice>
         <Choice>
           <Identity>F</Identity>
-          <Description> You should then recycle the application pool for the SharePoint site on each back-end Web server.</Description>
+          <Description>You should then recycle the application pool for the SharePoint site on each back-end Web server.</Description>
           <IsAnswer>false</IsAnswer>
         </Choice>
       </Choices>
