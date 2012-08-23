@@ -101,6 +101,8 @@ namespace SPCertificationTraining.Models
         public Guid ID { get; set; }
 
         public Guid UserKey { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:dd MMM yyyy h:mm tt}")]
         public DateTime? Date { get; set; }
 
         public int Progress { get; set; }
@@ -140,7 +142,7 @@ namespace SPCertificationTraining.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid ID { get; set; }
 
-        public bool IsCorrect { get { return this.Problem.Choices.Where(c => c.IsAnswer).Select(c => c.Identity).Except(this.Answers.Select(a => a.Identity)).Count() > 0; } }
+        public bool IsCorrect { get { return (this.Answers.Count > 0) ? this.Problem.Choices.Where(c => c.IsAnswer).Select(c => c.Identity).Except(this.Answers.Select(a => a.Identity)).Count() > 0 : false; } }
         //public List<string> AnswerIdentities { get { return this.Answers.Select(a => a.Identity).ToList(); } }
 
         // Navigation properties

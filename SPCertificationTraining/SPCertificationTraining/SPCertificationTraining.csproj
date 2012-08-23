@@ -147,6 +147,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Course.xml" />
     <Content Include="Global.asax" />
     <Content Include="README.jQuery.vsdoc.txt" />
     <Content Include="Scripts\jquery-1.7.2-vsdoc.js" />

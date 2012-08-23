@@ -73,6 +73,10 @@ namespace SPCertificationTraining.Controllers
 
                 return RedirectToAction("Index");
             }
+            catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
+            {
+                return View();
+            }
             catch (Exception ex)
             {
                 this.ModelState.AddModelError(string.Empty, ex);
