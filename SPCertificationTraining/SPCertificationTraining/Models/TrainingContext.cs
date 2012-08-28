@@ -17,6 +17,11 @@ namespace SPCertificationTraining.Models
         public DbSet<Question> Questions { get; set; }
         public DbSet<Answer> Answers { get; set; }
 
+        public TrainingContext()
+            : base("sptraining")
+        {
+        }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             //modelBuilder.Entity<Course>().HasMany(c => c.Problems).WithRequired(p => p.Course).WillCascadeOnDelete();
