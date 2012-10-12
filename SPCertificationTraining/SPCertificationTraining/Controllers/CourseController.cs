@@ -111,7 +111,7 @@ namespace SPCertificationTraining.Controllers
                     return new
                     {
                         Name = user.UserName,
-                        Average = x.Average(y => y.Avgerage) * 100
+                        Average = Math.Round(x.Average(y => y.Avgerage) * 100)
                     };
                 })
                 .OrderBy(x => x.Name)
