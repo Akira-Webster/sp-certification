@@ -57,10 +57,12 @@
                 }
                 else if (item.IsFinsihed)
                 { 
+                    @Html.ActionLink("Details", "Details", new { id = item.ID })
+                    @Html.Encode("|") 
                     @Html.ActionLink("Delete", "Delete", new { id = item.ID })
                 }
                 else if (item.IsStarted)
-                { 
+                {
                     @Html.ActionLink("Continue", "Problem", new { id = item.ID })
                     @Html.Encode("|") 
                     @Html.ActionLink("Delete", "Delete", new { id = item.ID })

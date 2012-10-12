@@ -62,6 +62,8 @@ namespace SPCertificationTraining.Controllers
             foreach (var identity in submitions)
                 currentquestion.Answers.Add(new Models.Answer() { ID = Guid.NewGuid(), Identity = identity });
 
+            var result = currentquestion.IsCorrect;
+
             // Update progress
             test.Progress++;
 

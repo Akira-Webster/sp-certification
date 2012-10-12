@@ -929,7 +929,7 @@ Which of the following actions should you take?
         <Choice>
           <Identity>A</Identity>
           <Description>You should consider modifying the application pool recycling settings.</Description>
-          <IsAnswer>true</IsAnswer>
+          <IsAnswer>false</IsAnswer>
         </Choice>
         <Choice>
           <Identity>B</Identity>
