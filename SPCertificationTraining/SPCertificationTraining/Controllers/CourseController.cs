@@ -92,6 +92,10 @@ namespace SPCertificationTraining.Controllers
             if (course == null)
                 throw new HttpException(404, "The Course you are looking for has been lost.");
 
+            var tests = this.Context.Tests.Where(t => t.Course.ID == course.ID);
+            foreach (var test in tests)
+                this.Context.Tests.Remove(test);
+
             this.Context.Courses.Remove(course);
             this.Context.SaveChanges();
 
