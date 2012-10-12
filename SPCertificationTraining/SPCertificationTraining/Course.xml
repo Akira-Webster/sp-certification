@@ -37,7 +37,7 @@ Which of the following actions should you take? (Choose Two.)
         <Choice>
           <Identity>E</Identity>
           <Description>You should consider including a Composite activity for approval and rejection.</Description>
-          <IsAnswer>false</IsAnswer>
+          <IsAnswer>true</IsAnswer>
         </Choice>
         <Choice>
           <Identity>F</Identity>
@@ -47,7 +47,7 @@ Which of the following actions should you take? (Choose Two.)
         <Choice>
           <Identity>G</Identity>
           <Description>You should consider including a Simple activity for approval and rejection.</Description>
-          <IsAnswer>true</IsAnswer>
+          <IsAnswer>false</IsAnswer>
         </Choice>
       </Choices>
     </Problem>
@@ -106,7 +106,7 @@ Which combination of the following actions should you take? (Choose two.)
       <Choices>
         <Choice>
           <Identity>A</Identity>
-          <Description> You should make use of Filestream storage on the database.</Description>
+          <Description>You should make use of Filestream storage on the database.</Description>
           <IsAnswer>true</IsAnswer>
         </Choice>
         <Choice>
@@ -342,10 +342,7 @@ Which of the following actions should you take?
         </Choice>
         <Choice>
           <Identity>C</Identity>
-          <Description>
-            You should consider having a new Content Organizer content type configured to define the custom button. You should then deploy the custom button by making use of the
-            Site Collection Features option in the Site Collection Administration group.
-          </Description>
+          <Description>You should consider having a new Content Organizer content type configured to define the custom button. You should then deploy the custom button by making use of the Site Collection Features option in the Site Collection Administration group.</Description>
           <IsAnswer>false</IsAnswer>
         </Choice>
         <Choice>
@@ -695,7 +692,7 @@ Which of following actions should you take?
         <Choice>
           <Identity>B</Identity>
           <Description>You should consider enabling BLOB cache by changing the enabled attribute to true in the SharePoint web.config file.</Description>
-          <IsAnswer>false</IsAnswer>
+          <IsAnswer>true</IsAnswer>
         </Choice>
         <Choice>
           <Identity>C</Identity>
@@ -722,10 +719,7 @@ Which of the following actions should you take?
       <Choices>
         <Choice>
           <Identity>A</Identity>
-          <Description>
-            You should consider changing the cacheForEditRights attribute of the Output Cache
-            Profile to true from the SharePoint web.config file.
-          </Description>
+          <Description>You should consider changing the cacheForEditRights attribute of the Output Cache Profile to true from the SharePoint web.config file.</Description>
           <IsAnswer>false</IsAnswer>
         </Choice>
         <Choice>
@@ -1125,7 +1119,7 @@ Which combination of the following actions should you take? (Choose two.)
         </Choice>
         <Choice>
           <Identity>D</Identity>
-          <Description> You should consider having an external list configured from the external content type.</Description>
+          <Description>You should consider having an external list configured from the external content type.</Description>
           <IsAnswer>true</IsAnswer>
         </Choice>
         <Choice>
@@ -1427,7 +1421,7 @@ Which of the following actions should you take?
         <Choice>
           <Identity>C</Identity>
           <Description>You should have an Unmanaged Metadata column configured.</Description>
-          <IsAnswer>true</IsAnswer>
+          <IsAnswer>false</IsAnswer>
         </Choice>
         <Choice>
           <Identity>D</Identity>
@@ -1654,28 +1648,23 @@ Which combination of the following actions should you take? (Choose two.)
         </Choice>
         <Choice>
           <Identity>C</Identity>
-          <Description>You should consider having the new version number and any necessary upgrade actions specified in </Description>
+          <Description>You should consider having the new version number and any necessary upgrade actions specified in Each of the Feature.xml files.</Description>
           <IsAnswer>true</IsAnswer>
         </Choice>
         <Choice>
           <Identity>D</Identity>
-          <Description>Each of the Feature.xml files.</Description>
-          <IsAnswer>false</IsAnswer>
-        </Choice>
-        <Choice>
-          <Identity>E</Identity>
           <Description>You should consider having all of the new features activated at the farm level.</Description>
           <IsAnswer>false</IsAnswer>
         </Choice>
         <Choice>
-          <Identity>F</Identity>
+          <Identity>E</Identity>
           <Description>You should consider only having the new features activated in the locations where they are currently active.</Description>
-          <IsAnswer>true</IsAnswer>
+          <IsAnswer>false</IsAnswer>
         </Choice>
         <Choice>
-          <Identity>G</Identity>
+          <Identity>F</Identity>
           <Description>You should consider having the feature upgrade executed as a solution package on the farm.</Description>
-          <IsAnswer>false</IsAnswer>
+          <IsAnswer>true</IsAnswer>
         </Choice>
       </Choices>
     </Problem>
