@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using SPCertificationTraining.DataModels;
+using System.Web.Security;
 
 namespace SPCertificationTraining.Controllers
 {
@@ -94,6 +96,69 @@ namespace SPCertificationTraining.Controllers
             this.Context.SaveChanges();
 
             return RedirectToAction("Index");
+        }
+
+        public ActionResult Statistics(Guid id)
+        {
+            var testForCourseQuery = this.Context.Tests.Where(x => x.Course.ID == id);
+
+            var userStatistics = testForCourseQuery
+                .GroupBy(x => x.UserKey)
+                .ToList()
+                .Select(x =>
+                {
+                    var user = Membership.GetUser(x.Key, false);
+                    return new
+                    {
+                        Name = user.UserName,
+                        Average = Math.Round(x.Average(y => y.Avgerage) * 100)
+                    };
+                })
+                .OrderBy(x => x.Name)
+                .ToDictionary(k => k.Name, v => v.Average);
+
+            var problemLayout = this.Context.Courses
+                .Where(x => x.ID == id)
+                .SelectMany(x => x.Problems)
+                .Select(x => new ProblemStatistics
+                {
+                    ID = x.ID,
+                    Identity = x.Identity,
+                    Description = x.Description,
+                    Answers = x.Choices.Select(c => new AnswerStatistics
+                    {
+                        ID = c.ID,
+                        IsCorrect = c.IsAnswer,
+                        Identity = c.Identity,
+                        Description = c.Description
+                    })
+                })
+                .ToList();
+
+            var questions = testForCourseQuery
+                .SelectMany(x => x.Questions);
+
+            foreach (var q in questions)
+            {
+                var p = problemLayout.Single(x => x.ID == q.Problem.ID);
+                p.NumberOfTimeOccurred++;
+                if(q.IsCorrect)
+                    p.NumberOfTimeAnswerRight++;
+
+                foreach (var a in q.Answers)
+                {
+                    var pa = p.Answers.Single(x => x.Identity == a.Identity);
+                    pa.NumberOfTimesChoosen++;
+                }
+            }
+
+            var courseStatistics = new SPCertificationTraining.DataModels.CourseStatistics
+            {
+                UserStatistics = userStatistics,
+                ProblemStatistics = problemLayout.OrderBy(x => x.Identity)
+            };
+
+            return View(courseStatistics);
         }
     }
 }

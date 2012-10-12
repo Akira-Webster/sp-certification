@@ -1,0 +1,45 @@
+﻿@model SPCertificationTraining.DataModels.CourseStatistics
+
+@{
+    ViewBag.Title = "Statistics";
+}
+
+<h2>Statistics</h2>
+
+<h4>User Statistics</h4>
+<table>
+    <tr>
+        <th>UserID</th>
+        <th>Average Test Result</th>
+    </tr>
+    @foreach (var item in Model.UserStatistics)
+    {
+    <tr>
+        <td>@item.Key</td>
+        <td>@item.Value %</td>
+    </tr>
+    }
+</table>
+
+<br />
+<hr />
+<br />
+
+<h4>Problem Statistics</h4>
+<table>
+    <tr>
+        <th>ProblemID</th>
+        <th>Number Of Time Occured</th>
+        <th>Average Result</th>
+    </tr>
+    @foreach (var item in Model.ProblemStatistics)
+    {
+    <tr>
+        <td>@item.Identity</td>
+        <td>@item.NumberOfTimeOccurred</td>
+        <td>
+            @item.PercentRight %
+        </td>
+    </tr>
+    }
+</table>
