@@ -545,7 +545,7 @@ Which of the following actions should you take?
         </Choice>
         <Choice>
           <Identity>C</Identity>
-          <Description>You should.</Description>
+          <Description>You should consider using default page to configure different themes for each division's SharePoint site.</Description>
           <IsAnswer>false</IsAnswer>
         </Choice>
         <Choice>
@@ -1497,7 +1497,7 @@ Which of the following actions should you take?
       </Choices>
     </Problem>
     <Problem>
-      <Identity>41</Identity>
+      <Identity>42</Identity>
       <Description>
         <![CDATA[You are employed as a developer at TestKing.com. TestKing.com has a SharePoint Server 2010  farm.
 
