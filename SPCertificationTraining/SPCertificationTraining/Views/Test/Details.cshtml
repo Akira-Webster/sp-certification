@@ -1,0 +1,33 @@
+﻿@model SPCertificationTraining.Models.Test
+
+@{
+    ViewBag.Title = "Test Details";
+}
+
+<div>
+    <div id="header">
+        <h2>Test Details on @Model.Date</h2>
+        <strong>@Model.Course.Title</strong> - <span>@Model.Course.Description</span>
+        </div>
+        <div>
+        <span>Score: @Model.Questions.Count(q => q.IsCorrect) / @Model.Total</span>
+        <br />
+        <span>Avgerage: @Model.Avgerage.ToString("P")</span>
+    </div>
+    <br />
+    <div id="details">
+        <table>
+            <tr>
+                <th>Problem #</th>
+                <th>Score</th>
+            </tr>
+            @foreach (var item in Model.Questions)
+            {
+            <tr>
+                <td>@item.Problem.Identity</td>
+                <td>@item.IsCorrect</td>
+            </tr>
+            }
+        </table>
+    </div>
+</div>

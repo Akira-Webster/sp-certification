@@ -1,0 +1,45 @@
+﻿@model SPCertificationTraining.Models.Problem
+
+@{
+    ViewBag.Title = "Problem";
+}
+
+<h2>Problem @Model.Identity</h2>
+
+<p>
+@Model.Description
+</p>
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <th></th>
+            <th>
+                Identity
+            </th>
+            <th>
+                Description
+            </th>
+        </tr>
+
+        @foreach (var item in Model.Choices.OrderBy(c => c.Identity))
+        {
+            <tr>
+                <td>
+                    <input name="Identity" type="checkbox" value="@item.Identity" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Identity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+            </tr>
+        }
+    </table>
+    
+    <p>
+        <input type="submit" value="Next" />
+    </p>
+}

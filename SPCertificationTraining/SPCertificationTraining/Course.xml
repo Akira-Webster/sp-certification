@@ -1,0 +1,1851 @@
+<?xml version="1.0"?>
+<Course xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Title>Sharepoint Developer Training</Title>
+  <Description>776</Description>
+  <Problems>
+    <Problem>
+      <Identity>1</Identity>
+      <Description>
+        <![CDATA[You are employed as a SharePoint administrator at TestKing.com. TestKing.com has a SharePoint Server 2010 site.
+
+You need to develop a custom workflow for a document approval process that relies on an approval chain. The approval chain must consist of several reviewers with each reviewer approving or rejecting the document as part of the approval process. Once a reviewer has provided his or her feedback, the status of the document must be changed automatically, an automated email must be sent to the author and the next reviewer in the approval chain must be notified automatically. The task for the next reviewer should also be created automatically.
+
+Which of the following actions should you take? (Choose Two.)
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider including an Association form for feedback from reviewers.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider including an Initiation form for feedback from reviewers.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider including a Modifications form for feedback from reviewers.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider including a Task form for feedback from reviewers.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>E</Identity>
+          <Description>You should consider including a Composite activity for approval and rejection.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>F</Identity>
+          <Description>You should consider including a Logged activity for approval and rejection.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>G</Identity>
+          <Description>You should consider including a Simple activity for approval and rejection.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>2</Identity>
+      <Description>
+        <![CDATA[You are employed as a SharePoint administrator at TestKing.com. TestKing.com has a SharePoint Server 2010 site.
+
+You have been tasked with developing a SharePoint Server 2010 feature that contains a feature receiver. Whenever the SharePoint Server 2010 feature is activated or deactivated, the feature receiver runs code that interacts with a Web service. This could result in unmanageable errors.
+In the event that the Web service does result in errors, the SharePoint Server 2010 feature should be prevented from activating or deactivating.
+
+You start by wrapping the code in a Try-Catch block.
+
+Which combination of the following actions should you take NEXT? (Choose two.)
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider having the error logged.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider sending an additional request to the web service in the catch block</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider throwing an exception in the Catch block.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider capturing SPException type exceptions only.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>E</Identity>
+          <Description>You should consider throwing an exception in the finally </Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>3</Identity>
+      <Description>
+        <![CDATA[You are employed as a SharePoint administrator at TestKing.com.
+TestKing.corn has a Windows Server 2008 computer named TESTKING-SR76 that has aRAID-O volume. TESTKJNG-SR76 runs SharePoint Server 2010 with a Microsoft SQL Server Express 2008 database. TESTKING-SR76 also hosts a SharePoint site that contains 56 GB of multimedia content. Some of the files that are included in the multimedia content are as big as 18 MB. The SharePoint site to use the standard SharePoint components and features.
+
+You are required to make sure that TRSTKING-SR76’s hard disk is configured for optimum read performance.
+
+Which combination of the following actions should you take? (Choose two.)
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should make use of Filestream storage on the database.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should make use of Filestream storage on the SharePoint site.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should make use of remote Binary Large Object (BLOB) storage on the SharePoint site.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should make use of external Binary Large Object (BLOB) storage on the SharePoint site.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>E</Identity>
+          <Description>You should make use of Binary Large Object (BLOB) storage on the database. </Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>4</Identity>
+      <Description>
+        <![CDATA[You are employed as a SharePoint administrator at TestKing.com.
+
+TestKing.com runs SharePoint Server 2010 with a Microsoft SQL Server Express 2008 database SharePoint hosts a site that contains two lists named Customers and Invoices Certain customers have numerous invoices.
+
+You have been tasked with making sure that the two lists need relates to each other.
+
+Which two of the following actions should you take? (Choose two.)
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider create a one-to-one relationship.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider create a one-to-many relationship.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider create a many-to-one relationship.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider including a Lookup column on the Invoices list.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>E</Identity>
+          <Description>You should consider including a Business Data column on the Invoices list.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>F</Identity>
+          <Description>You should consider including an External Data colunm on the Customers list.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>G</Identity>
+          <Description>You should consider including a column index on the Invoices list.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>H</Identity>
+          <Description>You should consider including a column index on the Customers list.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>5</Identity>
+      <Description>
+        <![CDATA[You are employed as a SharePoint administrator at TestKing.com. TestKing.com has a SharePoint Server 2010 site.
+
+You have been tasked with developing a SharePoint Server 2010 solution that has workflows configured to include code on list items, as well as custom pages for adding viewing, and updating list items.
+
+Which of following is the type of solution that you should deploy?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>A SharePoint server 2010 sandboxed solution.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>Multiple SharePoint Server 2010 sandbox solutions</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>A SharePoint Server 2010 farm solution.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>A solution containing the Web Parts and its related assemblies.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>6</Identity>
+      <Description>
+        <![CDATA[You are employed as an application developer at TestKing.com. TestKing.com has a SharePoint Server 2010 farm that hosts a SharePoint intranet site. TestKing.com has a SharePoint 2010 application server named TESTKING-SRI3 that cannot, however, be administered via the intranet site.
+
+You are in the process of developing an application on the SharePoint intranet site. You want to make sure that search statistics for all the sites on the farm assembles site usage data.
+
+Which combination of the following actions should you take’? (Choose two.)
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider having a SharePoint sandboxed solution configured to gather the search data.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider having a console application created to collect search statistics.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider having a timer job configured to run the application according to a specified schedule.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider running the application at regular intervals using Windows Task Scheduler.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>7</Identity>
+      <Description>
+        <![CDATA[You are employed as an application developer at TesrKing.com. You are currently in the process of designing numerous Internet sites for TestKing.com with the use of SharePoint Server 2010.
+
+You receive instructions to make sure that each and every Internet site has a user registration page, which makes use of the logic in a specific custom control, configured. Furthermore, the registration page should allow for editing HTML.
+
+Which two of the following actions should you take? (Choose two.)
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider creating a page that is based on a page layout that references the specific custom control.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should create a new custom control, and then create a page that is based on it.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider having the page configured to contain a field for HTML editing.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider creating an application page deployed to the _layouts directory that references the newly created custom control.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>8</Identity>
+      <Description>
+        <![CDATA[You are employed as an application developer at TestKing.com. TestKing.com has a SharePoint Server 2010 farm.
+You are in the process of developing a SharePoint Server 2010 application. You have received instructions to make sure that product pages can be con figured by TestKing.com’s content writers, and that these content writers are allowed to customize the page by adding Web Parts. You should also make sure that the Marketing pages are configured to enable content writers to choose values that have been defined in a current site column from a Marketing Type field.
+
+Your solution should include the Marketing Type field, as well as Web Part zones.
+
+Which two of the following actions should you take? 
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider reconfiguring the default page.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider configuring a page layout.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider configuring a new custom master page.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider configuring a site definition.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>9</Identity>
+      <Description>
+        <![CDATA[You are employed as an application developer at TestKing.corn. TestKing.com has a SharePoint Server 2010 farm.
+
+You are in the process of developing a SharePoint Server 2010 application. You have also configured a custom button for the application, and would like to specify that it has been defined, as well as added to the SharePoint Server 2010 ribbon.
+
+Which of the following actions should you take?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider having a new Content Organizer content type configured to define the custom button. You should then deploy the button by executing the SÏSADM .EXE command-Iine utility.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider creating Feature Definition, as well as Feature Element XML files that characterizes the custom button. You should then deploy the custom button by executing the STSADM.EXE command-line utility.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider having a new Content Organizer content type configured to define the custom button. You should then deploy the custom button by making use of the Site Collection Features option in the Site Collection Administration group.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider creating Feature Definition, as well as Feature Element XML files that characterizes the custom button. You should then deploy the custom button by making use of the Site Collection Features option in the Site Collection Administration group.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>10</Identity>
+      <Description>
+        <![CDATA[You are employed as an application developer at TestKing.com. TestKing.com has a SharePoint Server 2010 farm.
+
+You are in the process of developing a SharePoint Server 2010 application. The application is configured to have a form that permits users to enter their contact details. You have been instructed to also configure the application to have a dialog box that prompts users to confirm their details prior to saving the information.
+
+Which of the following actions should you take?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider creating an application page that calls the SP.UI.ModalDialog class.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider creating an application page that calls the SP.UI.PopoutMenu class.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider creating a new custom master page that calls the SP.UI.PopoutMenu class.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider creating a new custom master page that calls the SP.UI.PopoutMenu class.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>11</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.com. SharePoint Server 2010 is configured to manage Web site content for all TestKing.com’s Web sites.
+
+You are in the process of creating an Internet Web site that makes use of high end graphics. You are planning to configure the new Web site to include intricate modifications to the structure for the purpose of sustaining the new branding. You are also planning to configure the new Web site to support several browsers, and to make sure that all of the new Web site’s pages and subsites are reliable.
+
+Which of the following actions should you take?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider configuring a new custom master page that should be to be implemented all the way through TestKing.com’s Internet Web site.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider configuring a new custom template that should be employed all the way through TestKing.com’s Internet Web site</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider configuring a site definition the TestKing.com’s Internet Web site.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider configuring a new application page that should be employed all the way through TestKing.com’s Internet Web site.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>12</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.corn. TestKing.corn has a SharePoint Server 2010 environment.
+
+TestKing.com has an existing written policy that requires all TesiKing.com’s intranet
+subsites to meet TestKing.com’s business standards.
+
+When you discover that certain subsites are not falling within the stipulations of the policy, you resolve to correct it.
+
+Which of the following actions should you take?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider creating a master page at the root level that specifies TestKing.com’s business standards, and compels all subsites to inherit the master page.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider creating an application page at the root level that specifies TestKing.com’s business standards, and compels all subsites to inherit the application page.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider creating Web Part page at the root level that specifies TestKing.com’s business standards, and compels all subsites to inherit the Web Part page.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider reconfiguring the default page.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>13</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.com. TestKing.corn has a SharePoint Server 2010 site that is configured to make use of multiple third-party controls.
+
+You are in the process of developing a branding solution, but find that it is incompatible with the inline styling included in the third-party controls. You are required to make sure that your solution is used, even though the code for the third-party controls is inaccessible to you,
+
+Which of the following actions should you take?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider having a new master page created.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider having the default page altered.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider having the inline styles removed using client-side scripting.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider having a site definition modified to contain the branding for the site.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>14</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.com. TestKing.com has a SharePoint Server 2010 environment.
+
+You have recently created a Web application and included numerous site collections. You have configured all site collections within the application to make use of a newly customized master page. You would like display modifications to the master page to the Web application’s site collections.
+
+Which of the following actions should you take?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider using Visual Studio to deploy a solution package that contains the application page in a feature, and activate the feature in each site collection.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider using Visual Studio to deploy a solution package that contains the Web part page in a feature, and activate the feature in each site collection.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider using the Web browser to deploy the master page manually to the Master Page gallery of each site collection.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider using Visual Studio to deploy a solution package that contains the master page in a feature, and activate the feature in each site collection.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>15</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.com. TestKing.com has a SharePoint Server 2010 environment.
+
+You are in the process of developing an intranet site that allows TestKing.corn’s divisions to have their own SharePoint site. Each of these SharePoint sites should have a distinctive look that differentiates it from the other SharePoint sites.
+
+You would like to accomplish this without unnecessary customization.
+
+Which of the following actions should you take?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider using the Site Theme page to configure different themes for each division’s SharePoint site.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider using a site definition to configure different themes for each division’s SharePoint site.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider using default page to configure different themes for each division's SharePoint site.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider using a site definition to configure different themes for each division’s SharePoint site.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>16</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.corn. TestKing.com has a SharePoint Server 2010 environment.
+You are in the process of developing a content type generating application. TestKing.com has released a policy that states users must be prevented from modifying the content type of applications via the SharePoint 2010 user interface.
+
+You need to make sure that your application adheres to the policy.
+
+Which of the following actions should you take?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider having Content Type Syndication configured to prevent modifications to the content type</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider having a sealed content type created, and then deploying it as a feature.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider having a custom content type created that cannot be modified.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description> You should consider having a read-only content type created.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>17</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.corn. TestKing.com has a SharePoint Server 2010 environment.
+
+You are in the process of developing a SharePoint site for TestKing.com. TestKing.corn has a written policy that states users who contribute to the site should only be allowed to add, remove, and delete Web Parts that reside in the Test Web Parts Web Part zone. It also stipulates that Web Parts residing in the King Web Parts Web Part zone can only be added, and deleted by site collection owners.
+
+You need to make sure that your SharePoint site adheres to the policy.
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider creating a Web Part zone, named Required Web Parts, which permits customizations.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider creating a page layout with a Web Part zone named King Web Parts that permit customizations.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider creating a page layout with Web Part zones that do not allow customizations and grant contributors full control to the site collection.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider creating a Web Part zone named Required Web Parts that does not allow customizations with the desired Web Parts pre-loaded.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>E</Identity>
+          <Description>You should consider creating a Web Part page with a Web Part zone named King Web Parts that prohibit customizations.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>F</Identity>
+          <Description>You should consider creating a site definition that defines a Web Part zone, named King Web Parts, which permit customizations.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>18</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.com. TestKing.com has a SharePoint Server 2010 environment.
+
+You are in the process of developing a SharePoint 2010 application named TKSPApp35.
+TKSPApp35 is configured to interact with an external Microsoft SQL Server database. TestKing.com has an existing written policy that deals with connection strings. The policy states that SharePoint Server 2010 administrators should be allowed to add or modify connection strings at the Web application level, as well as declaratively add or modify connection strings without a custom tiser interface. Furthermore, SharePoint users should be prevented from modifying or viewing sensitive information in the connection strings. It also states that, in the event of any modifications to the connection strings, it should be done programmatically and not redeploy any code.
+
+You have been tasked with making sure that TKSPApp35 adheres to this policy.
+
+Which of the following actions should you take?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider accessing the web.config file to add or modify the connection strings.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider storing the connection strings in a shared network folder.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider accessing the machine.config file to add or modify the connection strings .</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider having the connection strings stored in SharePoint lists.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>19</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.com. TestKing.com has a SharePoint Server 2010 environment.
+
+TestKing.com’s SharePoint farm contains numerous servers, and also has a SharePoint 2010 internet-facing site that hosts a large number of graphics media files. 
+
+You would like to have the graphic media files cached in such a way that users will have to wait long to view it.
+
+Which of following actions should you take?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>
+            You should consider changing the cacheForEditRights attribute of the Output Cache
+            Profile to true from the SharePoint web.config file.
+          </Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider enabling BLOB cache by changing the enabled attribute to true in the SharePoint web.config file.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider changing the cacheForEditRights attribute of the Output Cache Profile to true from the SharePoint machine.config file.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider enabling BLOB cache by changing the enabled attribute to true in the SharePoint machine.config file.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>20</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.com. TestKing.com has a SharePoint Server 2010 environment.
+
+TestKing.com’s SharePoint farm contains numerous servers, and also has an Internet-facing SharePoint 2010 site. You have been instructed to configure the Web pages to load quicker so that users have a better site experience. Normally, this would make use of a lot of resources, and possibly require upgraded components. You have been instructed to complete this task without replacing any components.
+
+Which of the following actions should you take?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider changing the cacheForEditRights attribute of the Output Cache Profile to true from the SharePoint web.config file.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider enabling BLOB cache by changing the enabled attribute to false in the SharePoint web.config file.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider having disk-based caching enabled on the Web servers that host the Internet-facing Web site.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider making use of the global assembly cache.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>21</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.com. TestKing.com has a SharePoint Server 2010 environment.
+
+You are in the process of developing a new SharePoint 2010 application, as well as a Microsoft .NET Framework client application. The Microsoft .NET Framework client application must be configured for interaction with the new SharePoint 2010 application.
+You are instructed to make sure that the Microsoft .NET Framework client application has the ability to create, update, and delete lists.
+
+Which of the following actions should you take?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider making use of a Content Query Web Part.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider making use of SharePoint 2010 Web services in the client application.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider making use of the SharePoint Foundation 2010 managed client object model in the client application.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider making use of Business Connectivity Services with the authentication mode set to PassThrough.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>22</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.com. TestKing.com has a SharePoint Server 2010 environment.
+You are in the process of developing a new application named TKSPAppI3. TKSPAppI3 must be configured to collect list items from numerous site collections, and then display it in one list view.
+
+Which of the following actions should you take?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider making use of a SiteQuery object.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider making use of a SPWebQuery object.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider making use of a Content Query Web Part.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider making use of a KeywordQuery object.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>23</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.com. TestKing.com has a SharePoint Server 2010 farm.
+
+TestKing.com has released a new written policy, which states error messages that have been duplicated must not be logged. It also requires serious SharePoint error messages to be logged in the Windows Event Log. You have been tasked with enforcing this policy.
+
+Which of the following actions should you take?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider having Trace Log disk space usage limited.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider having Event Log Flood Protection enabled.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>Search for an exception in the SharePoint Unified Logging Service (ULS) logs.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider having Event Log Flood Protection disabled.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>24</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.com. TestKing.com has a SharePoint Server 2010 environment.
+
+It has been reported that the code of a SharePoint 2010 application has thrown an exception. You investigate, and find that this has caused SharePoint to present an error page in the browser that shows the exact time of the error, as well as a Correlation ID.
+
+You decide to carry out a deeper analysis by checking for exception messages that were logged.
+
+Which of the following actions should you take?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider searching the Event log.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider searching the SharePoint application log.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider searching the Trace log.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider searching the SharePoint Unified Logging Service (ULS) logs.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>25</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.com. TestKing.com has a SharePoint Server 2010 environment.
+
+You are in the process of testing a newly developed SharePoint 2010 Web Part that contains a custom button. You first attempt at using the custom button returns no response from the Web browser.
+You must make sure that the button works properly before releasing the Web Part to the active environment.
+
+Which of the following actions should you take?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider modifying the application pool recycling settings.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should check whether JavaScript has been enabled in your browser. You should also make sure that User Account Control is not the reason for the problem.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should reconfigure the permission policy level.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should shut down the workstation, restart, and reopen the browser.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>26</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.com. TestKing.com has a SharePoint
+Server 2010 for in their environment, which hosts a Web application named
+TKWebApp 1.
+
+You have just completed developing a new Web application named TKWebApp2 that should present the standard SharePoint 2010 landing page when you access it. You decide to test TKWehApp2 by accessing it via your Web browser, but receive an error message stating that the page cannot be located.
+
+Which of the following actions should you take?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider modifying the application pool recycling settings.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider configuring the Browser File Handling setting to Permissive for TKWebApp2.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider configuring the Web Page Security Validation setting to Off for TKWebApp2</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider linking TKWebApp2’s Url to a new site collection.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>27</Identity>
+      <Description>
+        <![CDATA[You are employed as an administrator at TestKing.com. TestKing.com has a SharePoint
+Server 2010 environment that hosts an application named TKSPApp 13.
+
+During an analysis of TKSPApp13, you discover that, as a result of excessive memory usage, application pool recycling occurs sporadically. You decide to perform an extensive analysis to find the reason for this happening.
+Which of the following actions should you take?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider modifying the application pool recycling settings.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description> You should consider having the Event logs examined for entries pertaining to SPRequest objects.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider having the Trace logs examined for entries pertaining to SPPersistedObject objects.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider having the ULS logs examined for entries pertaining to SPRequest objects.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>28</Identity>
+      <Description>
+        <![CDATA[You are employed as an administrator at TestKing.com. TestKing.com has a SharePoint Server 2010 environment that hosts numerous custom Web applications, and third-party Web Parts.
+
+During an analysis, you discover that client response times are slow, and that page faults are occurring excessively. You also discover that the application pool is frequently being recycled.
+
+Which of the following options accurately describes a likely reason for these problems?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description> Objects are not being properly disposed of by the custom code in third-party application.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>The size of the paging file is too large.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>The application pool recycling is set to occur too often.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description> The Application Layouts pages reference site master pages property is set to No.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>29</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.com. TestKing.com has a SharePoint Server 2010 environment that contains a SharePoint 2010 intranet site.
+
+You are in the process of developing a new SharePoint 2010 application named
+TKSPApp34. TKSPApp34 contains code that frequently forwards calls to SPSite and
+SP Web objects.
+
+While testing the new application, you find that the system and application response is not up to standard. You have also discovered that memory usage for JIS worker procedures are at a high level.
+You have been tasked with rectifying the problems.
+
+Which of the following actions should you take?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider reconfiguring the Resource Throttling settings.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider having a FeatureActivated node referencing feature added.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You have to make sure that SPSite and SP Web’s Dispose method is used all the way through the code.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider having your code added to the Featurelnstalled method.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>30</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.com. TestKing.com has a SharePoint Server 2010 environment that contains a SharePoint 2010 intranet site.
+You are in the process of developing a new SharePoint application named TKSPAppI3.
+TKSPAppI3 has a list named TKUser configured.
+
+You have received instructions to make sure that TKSPAppI3 has a drop-down menu configured that hosts key-value pair data acquired from a table hosted by a Microsoft SQL Server 2008 database.
+
+Which of the following actions should you take?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should configure a new list that connects to the external SQL Server table, and also configure a lookup column on the TKUser list that acquires data from an external list.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should configure a new list that includes an external data column, and also configure a lookup column on the TKUser list that acquires data from an external list.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should configure a new list that has an external data column, and then set the external SQL Server table as the source of this column.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should configure a managed metadata column on the TKUser list, and then insert the data from the SQL Server table into this column.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>E</Identity>
+          <Description>You should configure a new list that has an external data column, and then insert the data from the SQL Server table into this column.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>F</Identity>
+          <Description>You should configure a managed metadata column on the TKUser list, and also configure a lookup column on the TKUser list that acquires data from an external list.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>31</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.com. TestKing.com has a SharePoint Server 2010 environment. TestKing.com’s client contact details are stored in Microsoft Office Outlook 2010.
+
+You are in the process of developing a new SharePoint 2010 application. The new application should contain a list that only accumulates information regarding the clients whose details are stored in Microsoft Office Outlook 2010.
+
+Which combination of the following actions should you take? (Choose two.)
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider having a list that includes an external data column configured.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider having an external content type configured to reference the external list.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider having an external content type configured, and have the Office Item Type option enabled.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider having an external list configured from the external content type.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>E</Identity>
+          <Description>You should consider having a new external list configured to reference the exported data file.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>32</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.com. TestKing.com has a SharePoint Server 2010 environment.
+
+At present, a link to TestKing.corn’s data is provided by a Windows Communication Foundation (WCF) service.
+You are in the process of developing a list that acquires information via the Windows Communication Foundation (WCF) service. You have already configured an external content type.
+
+Which combination of the following actions should you take to complete this task? (Choose two.)
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider using the WCF Service option as the Extena1 Data Source Type.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider configuring a list that makes use of the internal content type as its source.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider configuring a list that makes use of the external content type as its source.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider linking the URL of the WCF service to the External Content Type property.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>33</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.com. TestKing.com has a SharePoint Server 2010 environment.
+
+You are in the process of developing a SharePoint application named TKSPApp13.
+TKSPApp 13 must be configured to merge information from various tables into one list that is synchronized with TestKing.com’s external database. This external database is inaccessible via remote connections.
+
+You have created a Web service, which merges data fields into a list.
+
+Which of the following actions should you take NEXT?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider importing the tables into lists by making use of Business Connectivity Services.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider synchronizing the list with the internal database using Business Connectivity Services.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider synchronizing the list with the external database using Business Connectivity Services.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider synchronizing the list with the internal database by applying event receivers.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>34</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.com. You have recently developed a
+SharePoint 2010 site, and configured it to be hosted by a third-party service.
+The new site is deployed as a sandboxed solution as per the third-party service’s requirements. The third-party service also makes use of forms-based authentication.
+
+You have been instructed to make sure that CRM information stored in TestKing.com’ domain is incorporated into the new site. You are also required to ensure that CRM data is properly presented for every user token.
+
+Which combination of the following actions should you take? (Choose two.)
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider making use of Business Connectivity Services with the authentication mode set to WindowsCredentials to link up to the CRM.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider making use of Business Connectivity Services with the authentication mode set to PassThrough to link up to the CRM.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider mapping FBA credentials to domain credentials by using the Secure Store Service.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider prompting users for their domain credentials.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>35</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.com. TestKing.com has a SharePointServer 2010 environment that contains a SharePoint 2010 intranet site.
+
+The site will be used by TestKing.com staff to fill in online timesheets. This information will be hosted by a third-party database.
+
+You have been instructed to make sure that a suitable form is created that allows TestKing.com staff to access it from SharePoint. You are also required to link a single URL to the created form, so that Web traffic can be traced.
+
+Which combination of the following actions should you take? (Choose all that apply.)
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should make use of Business Connectivity Services to link tip to the third-party database.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should configure an InfoPath Web-enabled form that submits data directly to the third-party database.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should configure an external content type, and configure an external list based on this content type.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should configure an internal content type, and configure an internal list based on this content type.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>E</Identity>
+          <Description>You should permit users to insert their actions by adding new items to the external list.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>F</Identity>
+          <Description>You should permit users to insert their actions by adding new items to the internal list.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>36</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.com. TestKing.com has a SharePoint Server 2010 environment that contains a SharePoint 2010 intranet site.
+
+You have received instructions to develop a strategy to capture information on the intranet site. TestKing.com users should be able to update list information using forms on the intranet site. TestKing.com users must have the ability to populate these forms offline if they so choose.
+
+You have accessed the user interface to identify design elements for the strategy.
+
+Which combination of the following actions should you take? (Choose two.)
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider having InfoPath 2010 client forms created.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider having InfoPath 2010 browser-based forms created.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider having the forms deployed to a SharePoint library for data entry and submission.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider having the forms deployed under the _layout folder.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>37</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.com. TestKing.com has a SharePoint Server 2010 environment.
+
+You are in the process of developing a new SharePoint site for TestKing.com. The new site will be configured to capture client data, which will be hosted by a Microsoft Dynamics CRM 4.0 database.
+
+You have been instructed to make sure that users in TestKing.com’s Marketing Division is allowed to execute create, retrieve, update, and delete (CRIJD) functions for their client data records on the SharePoint site. You also have to make sure that information in the CRM Dynamics database and the SharePoint site is synchronized. Marketing Division users require offline access to the information.
+
+You have been informed that your strategy should not require customized code.
+
+Which combination of the following actions should you take? (Choose all that apply.)
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should make use of Microsoft Office InfoPath 2010 to configure client and browser-based forms.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should access the CRM system in SharePoint and make use of Business Connectivity Services to configure an external content type for the contact list.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should configure custom Microsoft ASP.NET form pages for CRUD operations.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should configure InfoPath client forms for CRUD operations.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>E</Identity>
+          <Description>You should access the contact list of the SharePoint site that links up to the CRM system and configure a custom content type.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>F</Identity>
+          <Description>You should synchronize the offline data by configuring a SharePoint 2010 workspace.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>38</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.com. You are in the process of configuring a new SharePoint Server 2010 farm in TestKing.com’s environment.
+
+You have configured the new server farm to include numerous site collections, which distributes content types throughout the enterprise. You have configured suitable governance by making sure that the enterprise-wide content types are updated every 30 days. Furthermore, you have configured the use of a managed metadata service application for the server farm.
+
+Your next task is to configure the site collections to acquire updates to content type automatically.
+You have to make sure that your task is successfully completed using as little customization as possible.
+
+Which of the following actions should you take?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider having the necessary updates deployed to the global assembly cache directly.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider having Content Type Syndication configured to update the site collection lists when a central site collection is modified.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider having a PowerShell script created that iterates through the site collections and implements the necessary updates.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider making use of the SP.UI.UlUtility class in the client application.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>39</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.com. TestKing.com has a SharePoint Server 2010 environment.
+
+You are in the process of developing an application for TestKing.com. The application has to reference a current Microsoft SQL Server 2008 table, which includes metadata records structured in a key-value pair, to fill a site column.
+
+Which of the following actions should you take?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should have an Internal Data column configured.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should have an External Data column configured.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should have an Unmanaged Metadata column configured.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should have a Managed Metadata column configured.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>40</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.com. TestKing.com has a SharePoint Server 2010 environment.
+You have been tasked with developing an application that should include a workflow.
+This workflow should be configured to initialize via a call to SPWorkflowManager.StartWorkflow, or via the SharePoint user interface. Also, the workflow should not be linked to either a document library, or a specified list.
+
+Which of the following actions should you take?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider configuring a parallel site workflow.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider configuring a parallel list workflow.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider configuring a sequential site workflow.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider configuring a sequential list workflow.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>41</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.com. TestKing.com has a SharePoint Server 2010 environment.
+
+You have been instructed to create SharePoint 2010 workflows. You are also informed that the workflow solution has to be validated. Furthermore, you need to make use of Microsoft Visio 2010 to create these workflows.
+
+Which of the following actions should you take?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should access the File tab in Visio 2010 and make use of the Save to SharePoint option.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should access the Process tab in Visio 2010 and make use of the Check Diagram option.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description> You should click the Enable Content option on the Visio 2010 Message Bar.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider accessing the Design tab in Visio 2010.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>42</Identity>
+      <Description>
+        <![CDATA[You are employed as a developer at TestKing.com. TestKing.com has a SharePoint Server 2010  farm.
+
+You are in the process of developing a SharePoint Server 2010 solution package for a project that includes workflows, list definitions, assemblies, customized ASPX pages, features, and a Web Part.
+
+TestKing.com has an existing policy that requires all SharePoint applications to be manageable and secure. The policy also requires quota restrictions on resource utilization to be adhered to.
+
+After a brief analysis, you predict the limit could be surpassed by the Web Part. You decide to make user of minimal solutions for deploying the project.
+
+Which of the following actions should you take? (Choose all that apply.)
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider configuring a solution for list definitions</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider configuring a solution package that contains all of the artifacts in the development project.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider configuring a solution containing the Web Part and its related assemblies</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider configuring a farm-scoped solution that contains the Web Part</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>E</Identity>
+          <Description>You should consider configuring a solution for customized ASPX pages and workflows</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>F</Identity>
+          <Description>You should consider configuring a sandboxed solution containing the Web Part</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>43</Identity>
+      <Description>
+        <![CDATA[You are employed as an application developer at TestKing.com. TestKing.com has a SharePoint Server 2010 farm.
+
+You are in the process of developing a SharePoint Server 2010 solution package. You have added a feature to the solution package for activation.
+You have been instructed to make sure that the feature can only be activated from site collections in certain Web applications in TestKing.com’s SharePoint Server 2010 farm.
+
+Which of the following actions should you take?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider having a DwpFile element and an Assembly element, and then selecting the WebApplication option as the DeployinentTarget property of the feature assembly.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider having a DwpFile element and an Assembly element, and then selecting the GlobalAssembiCache option as the DeployrnentTarget property of the feature assembly.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider creating a farm solution, and then selecting the GlobalAssembiCache option as the DeploymentTarget property of the feature assembly.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider creating a farm solution, and then selecting the WebApplication option as the DeploymentTarget property of the feature assembly.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>44</Identity>
+      <Description>
+        <![CDATA[You are employed as a SharePoint administrator at TestKing.com. TestKing.com has a SharePoint Server 2010 environment.
+
+You have been tasked with configuring an upgrade strategy for an application named TKAppOI. Your strategy has to allow for a current workflow to contain new code activity, and that running workflow instances keep on working.
+Before making the necessary changes to the workflow, you are informed that any new instances also have to contain the changes.
+
+You then make the necessary changes to the workflow code.
+
+Which combination of the following actions should you take? (Choose all that apply.)
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider having the new version of the workflow feature deployed to GAC.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider having the code deployed to the GAC.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider having the current version of the workflow assembly increased.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider having the workflow feature activated.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>E</Identity>
+          <Description>You should consider having suitable workflow.xml file altered to reference the new version.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>F</Identity>
+          <Description>You should consider having the workflow feature deactivated.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>45</Identity>
+      <Description>
+        <![CDATA[You are employed as a SharePoint administrator at TestKing.com. TestKing.com has a SharePoint Server 2010 farm.
+
+At present there are numerous working features, which you previously developed, in TestKing.com’s SharePoint farm. These features are configured for use at every scope level across TestKing.com’s entire SharePoint farm.
+
+You are instructed to upgrade all features on TestKing.com’s SharePoint server farm, including feature instances, to the most recent edition. Furthermore, you must make sure that the upgrade strategy allows TestKing.com’s sites to be offline for a minimal period of time.
+
+Which combination of the following actions should you take? (Choose two.)
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider having all of the features deployed to the farm as a single solution package.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider having each of the features deployed to the farm in its own solution package.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider having the new version number and any necessary upgrade actions specified in Each of the Feature.xml files.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider having all of the new features activated at the farm level.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>E</Identity>
+          <Description>You should consider only having the new features activated in the locations where they are currently active.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>F</Identity>
+          <Description>You should consider having the feature upgrade executed as a solution package on the farm.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>46</Identity>
+      <Description>
+        <![CDATA[You are employed as a SharePoint administrator at TestKing.com. TestKing.com has a SharePoint Server 2010 site.
+SharePoint Server 2010 solutions are regularly deployed and require a lot of administrative effort. As a result, you decide to automate the process by creating a custom application. The application must be configured to make use of Windows PowerShell cmdlets.
+
+Which of the following actions should you take?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider executing the Add-SPSolution Windows PowerShell cmdlet before executing the Install-SPSolution.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider executing the Add-SPUserSolution Windows PowerShell cmdlet before executing the Install-SPUserSolution.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider executing the Update-SPSolution Windows PowerShell crndlet.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider executing the Install-SPFeature Windows PowerShell cmdlet.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>47</Identity>
+      <Description>
+        <![CDATA[You are employed as a SharePoint administrator at TestKing.corn. TestKing.com has a SharePoint Server 2010 site.
+
+TestKing.com’s SharePoint Server 2010 site is hosted by two front-end Web servers, named TESTKJNG-SR13 and TESTKING-SRI4, and is configured to be public-facing.
+
+You have configured load balancing for TESTKJNG-SR13 and TESTKING-SRI4.
+After TestKing.corn relocates to new premises, you are instructed to configure a strategy to update the contact details on the SharePoint Server 2010 site. Your strategy should require as little time to develop as possible, and have a minimal effect on site users.
+
+Which of the following actions should you take?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>Create a PowerShell script to iterate through the site content and make the updates as needed.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider having Content Type Syndication configured to implement the necessary updates.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider making use of the SP.UI.UlUtility class in the client application.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider having a Web Part page created, and then deployed to the top-level site of the site collection.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>48</Identity>
+      <Description>
+        <![CDATA[You are employed as a SharePoint administrator at TestKing.com. TestKing.com has a SharePoint Server 2010 site.
+
+TestKing.com’s SharePoint Server 2010 site is hosted by two front-end Web servers, named TESTK1NG-SR34 and TESTKING-SR35, and is configured to be public-facing. However, the servers do not have load balancing configured.
+
+You have been informed that the code in the global assembly cache (GAC) must be altered as part of the update strategy. You also have to make sure that TestKing.com users who use the site are minimally affected by your strategy.
+
+Which combination of the following actions should you take? (Choose two.)
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider deploy the update within a custom Microsoft Windows Installer package that copies the code into the GAC.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider Deploy the update directly to the GAC.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should then carry out an iisReset on each front-end Web server.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should then carry out an iisReset on each back-end Web server.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>E</Identity>
+          <Description>You should then recycle the application pool for the SharePoint site on each front-end Web server.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>F</Identity>
+          <Description>You should then recycle the application pool for the SharePoint site on each back-end Web server.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>49</Identity>
+      <Description>
+        <![CDATA[You are employed as a SharePoint administrator at TestKing.com. TestKing.com has several SharePoint Server 2010 sites that were created using identical site definitions.
+
+You have received instructions to update the property values of the Web Parts identified in the site definitions of the current SharePoint 2010 sites. Furthermore, you are informed that the process should require as little time to develop as possible.
+
+Which of the following actions should you take?
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider copying an update into a SharePoint solution file.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider recycling the application pool for the SharePoint sites.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>Copy an update to the Web Part into the global assembly cache (GAC) and perform an IIS Reset.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider making use of a PowerShell script to iterate through the SharePoint 2010 sites and update the property.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+    <Problem>
+      <Identity>50</Identity>
+      <Description>
+        <![CDATA[You are employed as a SharePoint administrator at TestKing.com. TestKing.com has a SharePoint Server 2010 site.
+
+You have previously configured custom Web Parts, and installed it on TestKing.com’s global assembly cache (GAC).
+
+When a fellow administrator informs you that changes has been made to the signing key used for the Web Parts, you decide to configure an update for the Web Parts. You would like to achieve your goal without modifying the value settings of the Web Parts’ properties.
+]]>
+      </Description>
+      <Choices>
+        <Choice>
+          <Identity>A</Identity>
+          <Description>You should consider configuring a delegate control deploying it through a feature.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>B</Identity>
+          <Description>You should consider recycling the application pool for the SharePoint site.</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>C</Identity>
+          <Description>You should consider copying the data programmatically from the current Web Parts to their new versions, before removing the old instances.</Description>
+          <IsAnswer>true</IsAnswer>
+        </Choice>
+        <Choice>
+          <Identity>D</Identity>
+          <Description>You should consider deploy the update within a custom Microsoft Windows Installer package</Description>
+          <IsAnswer>false</IsAnswer>
+        </Choice>
+      </Choices>
+    </Problem>
+  </Problems>
+</Course>

@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div id="new-test">
+    @using (Html.BeginForm("Create", "Test"))
+    {
+    <div>
+        <fieldset>
+            <legend>Start a new Test</legend>
+            <div>
+                <span>Pick your course:</span>
+                @Html.DropDownList("Course", this.ViewBag.Courses as IEnumerable<SelectListItem>)
+                <input type="submit" value="Start" />
+            </div>
+        </fieldset>
+    </div>
+    }
+
+</div>
+
+<div id="past-tests">
+    <h2>Your Tests</h2>
+   <table>
+    <tr>
+        <th>Course</th>
+        <th>Date</th>
+        <th>Status</th>
+        <th>Score</th>
+        <th>Avgerage</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in this.ViewBag.PastTests as IEnumerable<SPCertificationTraining.Models.Test>)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Course.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                 @item.Questions.Count(q => q.IsCorrect) / @item.Total
+            </td>
+            <td>
+                @item.Avgerage.ToString("P")
+            </td>
+            <td>
+                @{
+                if (!item.IsStarted)
+                { 
+                    @Html.ActionLink("Start", "Problem", new { id = item.ID })
+                }
+                else if (item.IsFinsihed)
+                { 
+                    @Html.ActionLink("Details", "Details", new { id = item.ID })
+                    @Html.Encode("|") 
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                }
+                else if (item.IsStarted)
+                {
+                    @Html.ActionLink("Continue", "Problem", new { id = item.ID })
+                    @Html.Encode("|") 
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                }
+                
+                }
+            </td>
+        </tr>
+    }
+
+    </table>
+</div>
